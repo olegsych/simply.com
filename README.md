@@ -1,10 +1,38 @@
 # simply::com
 
-A small C++ library for working with COM
+A small C++ library for working with COM. Clean, modern C++; exception-based error reporting; no ATL or macros.
 
-## building
+## use 
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/olegsych/simply.com?branch=master&retina=true)](https://ci.appveyor.com/project/olegsych/simply-com/branch/master)
+Add the [simply.com](http://www.nuget.org/packages/simply.assert/) NuGet package to your Visual C++ 
+project using the [Package Manager Dialog](http://docs.nuget.org/consume/Package-Manager-Dialog) or 
+the [Package Manager Console](http://docs.nuget.org/consume/package-manager-console).
+``` PowerShell
+Install-Package simply.com
+```
+
+Include the library header and use its namespace.
+``` C++
+#include <simply/com.h>
+using namespace simply;
+```
+
+Use `com_ptr` to safely manage COM interface pointers and `check` to convert `HRESULT` codes to `com_error` exceptions.
+``` C++
+try 
+{
+    com_ptr<IMetaDataDispenserEx> dispenser;
+    check(CoCreateInstance(CLSID_CorMetaDataDispenser, 0, CLSCTX_INPROC_SERVER, IID_IMetaDataDispenserEx, dispenser));
+}
+catch (const com_error& error)
+{
+    cout << error.what() << error.hresult();
+}
+```
+
+## build
+
+[![Build status](https://ci.appveyor.com/api/projects/status/github/olegsych/simply.com?branch=master)](https://ci.appveyor.com/project/olegsych/simply-com/branch/master)
 
 From [Visual Studio 2015](https://www.visualstudio.com/downloads):
 - Open `simply.com.sln`
@@ -17,7 +45,7 @@ msbuild simply.com.sln /p:Platform=x86
 msbuild simply.com.sln /p:Platform=x64
 ```
 
-## testing
+## test
 
 From Visual Studio 2015:
 - Select _Run_ / _All Tests_ from the _Test_ menu

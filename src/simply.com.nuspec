@@ -14,7 +14,6 @@
   <files>
     <file src="*.targets" target="build\native\" />
     <file src="simply\**\*.h" target="build\native\simply\" />
-    <file src="simply\**\*.cpp" target="build\native\simply\" />
   </files>
 </package>
 

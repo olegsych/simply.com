@@ -4,7 +4,7 @@ A small C++ library for working with COM. Clean, modern C++; exception-based err
 
 ## use 
 
-Add the [simply.com](http://www.nuget.org/packages/simply.assert/) NuGet package to your Visual C++ 
+Add the [simply.com](http://www.nuget.org/packages/simply.com) NuGet package to your Visual C++ 
 project using the [Package Manager Dialog](http://docs.nuget.org/consume/Package-Manager-Dialog) or 
 the [Package Manager Console](http://docs.nuget.org/consume/package-manager-console).
 ``` PowerShell

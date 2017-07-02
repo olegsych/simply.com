@@ -11,10 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="simply\com\check.h" />
-    <ClInclude Include="simply\com.h" />
-    <ClInclude Include="simply\com\com_error.h" />
-    <ClInclude Include="simply\com\com_ptr.h" />
+    <ClInclude Include="**\*.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="simply.com.nuspec" />

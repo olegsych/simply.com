@@ -41,15 +41,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stub_IUnknown.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="com_error_test.cpp" />
-    <ClCompile Include="com_ptr_test.cpp" />
-    <ClCompile Include="com_test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="**\*.h" />
+    <ClCompile Include="**\*.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\src\simply.com.targets" />

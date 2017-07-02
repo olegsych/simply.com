@@ -30,6 +30,14 @@ catch (const com_error& error)
 }
 ```
 
+## clone
+
+This repository contains [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+```
+git clone --recursive https://github.com/olegsych/simply.com.git
+```
+
 ## build
 
 [![Build status](https://ci.appveyor.com/api/projects/status/github/olegsych/simply.com?branch=master)](https://ci.appveyor.com/project/olegsych/simply-com/branch/master)
